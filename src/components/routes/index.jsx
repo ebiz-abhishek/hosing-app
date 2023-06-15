@@ -9,7 +9,7 @@ const RoutePage = () => {
         <Router>
             <Routes>
                 {routes.map(({ path, component: Component }, i) => {
-                    return <Route path={path}
+                    return <Route path="/"
                         element={
                             <MasterLayout
                                 ptitle={Component.props.title}
