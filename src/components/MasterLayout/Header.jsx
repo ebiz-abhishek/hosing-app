@@ -37,13 +37,13 @@ const HeaderPage = () => {
         },
      
         {
-            label: 'Notification',
-            key: 'notification',
+            label: 'User',
+            key: 'user',
             icon: <NotificationOutlined />
         },
         {
-            label: 'My Profile',
-            key: 'profile',
+            label: 'User Form',
+            key: 'user-form',
             icon: <InfoCircleOutlined />,
         },
        

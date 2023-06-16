@@ -1,6 +1,6 @@
-import Notification from "../pages/notification";
+import Notification from "../pages/userform";
 import Dashboard from "../pages/dashboard";
-import Profile from "../pages/profile";
+import Profile from "../pages/userlist";
 
 // import ErrorPage from "../pages/view/ErrorPage";
 const routes = [
@@ -13,11 +13,11 @@ const routes = [
         component: <Dashboard title="Dashboard" />
     },
     {
-        path: "/profile",
+        path: "/user",
         component: <Profile title="Dashboard" />
     },
     {
-        path: "/notification",
+        path: "/user-form",
         component: <Notification title="Dashboard" />
     },
    
