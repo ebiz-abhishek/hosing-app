@@ -6,14 +6,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const Notification = ()=>{
     const [form] = Form.useForm();
-    const {data} = useLocation();
+    const {state} = useLocation();
     const navigate = useNavigate();
-
 
     const onFinish = async(event)=>{
         try {
-            if(data?.id){
-                await updateDoc(doc(db, "Users", data.id), { firstname:event.firstname,
+            if(state?.id){
+                await updateDoc(doc(db, "Users", state.id), { firstname:event.firstname,
                     lastname:event.lastname,
                     age:event.age,
                     city:event.city});
@@ -34,13 +33,14 @@ const Notification = ()=>{
     }
 
     useEffect(() => {
-       if(data?.id){ form.setFieldsValue({
-            firstname:data?.firstname,
-            lastname:data?.lastname,
-            age:data?.age,
-            city:data?.city
+
+       if(state?.id){ form.setFieldsValue({
+            firstname:state?.firstname,
+            lastname:state?.lastname,
+            age:state?.age,
+            city:state?.city
         });}
-    }, [data?.id])
+    }, [state?.id])
     
 
 
